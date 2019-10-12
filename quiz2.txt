@@ -1,0 +1,37 @@
+public class Account{
+
+	private int accountNumber;
+	private String customerName;
+
+	public Account(int a, String c){
+		this.accountNumber = a;
+		this.customerName = c;
+	}
+
+	public int getAccountNumber(){
+		return accountNumber;
+	}
+
+}
+
+public class ChequingAccount extends Account{
+
+	private static double transactionFee;
+	private int freeTransaction;
+
+	public ChequingAccount(double fee, int t, int a, String c){
+		super(a, c);
+		this.transactionFee = fee;
+		this.freeTransaction = t;
+	}
+
+	public int getAccountNumber(){
+		super.accountNumber;
+		return super.getAccountNumber();
+	}
+}
+
+Account a = new Account();
+System.out.println(a.getAccountNumber());
+a = new ChequingAccount();
+System.out.println(a.getAccountNumber());

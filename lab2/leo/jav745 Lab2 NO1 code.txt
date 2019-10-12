@@ -1,0 +1,210 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package lab2;
+import java.util.*;
+/**
+ *
+ * @author kingleo bem
+ */
+
+public class BankTeller {
+	public static void main(String[] args) {
+		
+		// create accounts
+		
+		// ask for number of accounts
+		Scanner input = new Scanner(System.in);
+		System.out.println("How many accounts would you like to create?");
+		int numOfAccounts = input.nextInt();
+		
+		// allocate storage for accounts
+		String acctNames; //= new String[numOfAccounts];
+		int  acctNumbers; //= new int [numOfAccounts];
+		double acctBalance; //= new double[numOfAccounts];
+		Accounts [] Acc = new Accounts[numOfAccounts]; 
+		// counter that is used to generate new account
+		// numbers.  Account numbers are distributed by
+		// the system to ensure uniqueness.
+		int currentAccNum = 7000;
+		
+		// iteration structure is used to  
+		for (int x = 0; x < numOfAccounts; x++) {
+			Accounts a = new Accounts();
+			// initialize a account 
+			System.out.print("name of account holder\n");
+			acctNames = input.next();
+			a.setaccNames(acctNames);
+                        
+			a.setaccNumbers(currentAccNum);
+			currentAccNum = currentAccNum + 1;
+			System.out.print("Enter initial deposit \n");                        
+			acctBalance = input.nextDouble();
+                        a.setaccBalance(acctBalance);
+			Date timeCreated = new Date();
+                        a.settimeCreated(timeCreated);
+			System.out.printf("new account created, name: %s account number %d,\n" ,a.getaccNames(), a.getaccNumbers());
+                        System.out.println("created on " + a.gettimeCreated());
+                        Acc[x] = a;
+		}
+		
+		
+		// update accounts
+		System.out.println("What do you want to do?");
+		System.out.println("1. Deposit");
+		System.out.println("2. Withdraw");
+		System.out.println("3. Exit");
+		int choice = input.nextInt();
+		
+		do {
+			
+			switch (choice) {
+			case 1:
+				// deposit
+				
+				// get account number from user
+				System.out.println("Which account to you want to deposit to?");
+				int acctNumDep = input.nextInt();
+				
+				// find account number
+				int d = 0;
+				while ((Acc[d].getaccNumbers() != acctNumDep) && (d < numOfAccounts))
+					d++;
+				
+				// deposit money into account selected
+				if (d < numOfAccounts ) {
+					System.out.println("How much do you want to deposit?"); 
+					double deposit = input.nextDouble();
+                                        deposit += Acc[d].getaccBalance();
+                                        Acc[d].setaccBalance(deposit);
+                                        Date lastUpdate = new Date();
+                                        Acc[d].setlastUpdate(lastUpdate);
+					System.out.printf("account updated, name: %s account number %d, bal: $%.2f!\n"
+							,Acc[d].getaccNames(),  Acc[d].getaccNumbers(), Acc[d].getaccBalance());
+                                        System.out.println("Updated on " + Acc[d].getlastUpdate() );
+					
+				} else {
+					System.out.println("Invalid account number"); 
+				}
+				break;					
+			case 2:
+                            //withdrawal
+				// get account number from user
+				System.out.println("Which account to you want to withdraw from?");
+				int acctNumW = input.nextInt();
+				
+				// find account number
+				int b = 0;
+				while ((Acc[b].getaccNumbers() != acctNumW) && (b < numOfAccounts))
+					b++;
+				
+                            // money withdrawal  from account selected
+				if (b < numOfAccounts ) {
+					System.out.println("How much do you want to withdraw?"); 
+					double AmW = input.nextDouble(); // AmW means amount to be widthdrawn
+                                        if ( Acc[b].getaccBalance() < AmW  ){
+                                            System.out.println("YOU DO NOT HAVE ENOUGH MONEY TO COMPLETE THIS TRANSAACTION "
+                                                    + "your Account balance is $" + Acc[b].getaccBalance() );}
+                                        else{
+                                        double newBal = Acc[b].getaccBalance() - AmW;
+                                        Acc[b].setaccBalance(newBal);
+                                        Date lastUpdate = new Date();
+                                        Acc[b].setlastUpdate(lastUpdate);
+					System.out.printf("account updated, name: %s account number %d, bal: $%.2f!\n"
+							,Acc[b].getaccNames(),  Acc[b].getaccNumbers(), Acc[b].getaccBalance());
+                                        System.out.println("Updated on " + Acc[b].getlastUpdate() );
+                                        }
+				} else {
+					System.out.println("Invalid account number"); 
+				}     
+                        break;
+			case 3:
+				// exit
+                                System.out.println("THank You. \n see you next time ");				
+			
+                             default:	
+				System.out.println("Invalid option\n please enter '1', '2' or '3' next time ");// invalid
+			break;
+                        }
+
+                    System.out.println("\n What do you want to do?");
+                                    System.out.println("1. Deposit");
+                                    System.out.println("2. Withdraw");
+                                    System.out.println("3. Exit");
+                                    choice = input.nextInt();			
+                                    } while(choice != 3);    
+}
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+package lab2;
+
+import java.util.*;
+/**
+ *
+ * @author kingl
+ */
+public class Accounts {
+    /**creating instance variables to store
+     *class object variables
+     */
+    
+    private String accNames;
+    private int accNumbers;
+    private double accBalance ;
+    Date timeCreated = new Date();   
+    Date lastUpdate = new Date();
+ /**   public Accounts(){
+        this.accNames = accNames;
+        this.accNumbers = accNumbers;
+        this.accBalance = accBalance;
+        Date timeCreated = new Date();
+    }
+*/    
+    public void setaccNames(String accNames){
+        this.accNames = accNames;
+    }    
+        
+    public String getaccNames(){
+        return accNames;
+    }
+    
+    public void setaccNumbers(int accNumbers){
+       this.accNumbers = accNumbers;
+    }
+
+    public int getaccNumbers(){
+         return accNumbers;
+    }
+    
+    public void setaccBalance (double accBalance){
+        this.accBalance = accBalance;
+    }
+
+    public double getaccBalance (){
+        return accBalance;
+    }
+        
+    public Date gettimeCreated(){
+        return timeCreated;
+    }
+ 
+    public void settimeCreated(Date timeCreated){
+        this.timeCreated = timeCreated;
+    }
+    
+    public Date getlastUpdate(){
+        return lastUpdate;
+    }
+    
+    public void setlastUpdate(Date lastUpdate){
+        this.lastUpdate = lastUpdate;
+    }
+     
+}

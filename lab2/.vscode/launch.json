@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - testApplication",
+            "request": "launch",
+            "mainClass": "testApplication",
+            "projectName": "lab2_231feae9"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Bank",
+            "request": "launch",
+            "mainClass": "Bank",
+            "projectName": "lab2_231feae9"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - bank",
+            "request": "launch",
+            "mainClass": "bank",
+            "projectName": "lab2_231feae9"
+        }
+    ]
+}

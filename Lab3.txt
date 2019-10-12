@@ -1,0 +1,15 @@
+1.  mkdir ./ops700-lab3; cp ~hong.huang/ops700/fruits.txt ./ops700-lab3/fruits.txt
+2.  head -7 fruits.txt > output.txt
+3.  tail -3 fruits.txt >> output.txt
+4.  echo "The approach of autumn is nigh" >> output.txt
+5.  sort fruits.txt > sorted.txt
+6.  cut -d, -f4-5 fruits.txt
+7.  cut -d, -f1,3 fruits.txt > filtered.txt
+8.  wc -l output.txt
+9.  ls ../ops700-lab3 | wc -l
+10. grep apple ../ops700-lab3/*.txt
+11. grep -i orange ../ops700-lab3/*.txt | wc -l
+12. tr a-z A-Z < sorted.txt
+13. ls -la | tr a-z A-Z > upper.txt
+14. sort filtered.txt | head -4 >> filtered.txt
+15. grep -vi apple ../ops700-lab3/*.txt | sort | tail -3 > last.txt

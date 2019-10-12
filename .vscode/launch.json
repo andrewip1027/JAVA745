@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Cashier",
+            "request": "launch",
+            "mainClass": "Cashier"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - bank",
+            "request": "launch",
+            "mainClass": "bank"
+        }
+    ]
+}
