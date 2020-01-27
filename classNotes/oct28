@@ -1,0 +1,86 @@
+we have arrary of    2 4 6 8 10 12 14     if we in the middle - #8 , easier to do..
+
+public class BetterSort { 
+	public static int betterSort( double [] a, double v) { 
+	
+	int lindex = 0; 
+	int hindex = a.length; 
+	int mIndex = (lIndex + hIndex+1) /2;
+	
+	do{
+		if (a[mIndex]==v)return mIndex; 
+		else if (v < a[mIndex]) { 
+			hIndex = mIndex-1;
+		else lIndex = mIdex+1;  //must be less than 
+		} while (lIndex <= hIndex);
+	
+	}
+}
+
+public class User { 
+	public static void main(String[] args) { 
+	//todo auto generated method stub
+	double aArray[] = {2,3,4,5,6,7,8,9}; 
+	try { 
+		int foundIndex = BetterSort.betterSort(aArray,5); 
+		catch (ElementNotFoundException e) { 
+			e.printStackTrace();
+		}
+	}
+		
+		
+		Sorting 
+	-place data eements in some defined order
+		>integers are natural 
+		>Strings 		
+	-Helps humans interpret and visualize information that can be inferred from the data elements
+	-Helps computers detect patterns, isolate abnormal elements and classify individual elements actions usually include input, output or computation operations
+	
+	Why do we compare 
+We look things in natural order   We can easily look and check value
+
+	-bubble sort
+	5 3 4 2 1 
+	3 2 1 4 5  
+
+	Insertion sort
+	5 3 4 2 1
+	3 4 5  <-- sorted  2 1  
+	then 
+	1 2 3 4 5 1 
+	then 
+	1 2 3 4 5 
+
+	These two sorting have simular effectiveness 
+	
+Big O notations 
+		
+		
+		
+		mc
+		programming - part of one programming   , method, class sturcture
+		IDE tools need 
+	
+	how c differ to java  - machine language
+	machine language differ to language 
+		only works for particular machine
+	types of architecture is diff in diff operating systems,  Platform  and jbm  - these are advantage of java
+	
+	Another ad  classes is loaded, verified, btye code is system modify, security checks your program 
+	jbm prevent certain things happening 
+	Steps to execute java program
+	
+	
+	values in parent are important
+	
+	UML class diagram 
+	
+	if you have reference, you can assign it and sub classes 
+	
+	chequing account - is a new account 
+	
+	
+	Lastly we have abstract classes , these class cant be created but provide structure to children 
+	interfaces 
+
+

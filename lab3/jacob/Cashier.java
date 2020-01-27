@@ -23,10 +23,10 @@ public class Cashier {
 		//retrieve tax rates for both goods and services depending on the province code input
 		do{
 			System.out.print("Please enter the province code: ");
-			provinceCode = input.nextLine();
+			provinceCode = input.nextLine(); //store provinceCode input 
 			
 			for(TaxRates rate : TaxRates.values()){
-				if(provinceCode.toUpperCase().equals(rate.toString())){
+				if(provinceCode.toUpperCase().equals(rate.toString())){  //
 					goodTax = Double.parseDouble(rate.getTaxInfo()[0]);
 					serviceTax = Double.parseDouble(rate.getTaxInfo()[1]);
 					askAgain = false;
@@ -67,11 +67,11 @@ public class Cashier {
 						askAgain = false;
 					}
 				}while(askAgain);
-			}else if(Integer.parseInt(option) == 2){
+			}else if(Integer.parseInt(option) == 2){s
 				//add the input quantity in weight of grass seed item to the shopping cart
 				askAgain = true;
 				do{
-					System.out.print("\nPlease enter the quantity (at least 1 kg): ");
+					System.out.print("\nPlease enter the quantity (at least 1 kg): "); //but showing (at least)
 					quantity = input.nextLine();
 					
 					if(Double.parseDouble(quantity) >= 1.0){

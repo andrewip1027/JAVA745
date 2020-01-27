@@ -1,0 +1,47 @@
+Java Lab 5 
+
+99 FileWriter 
+
+38 should scanner variable sortMethod be String ?
+
+40 scanner class use DO statment ? 
+
+
+
+
+javac *. java & java SortTester 100
+Remember: 
+
+System.out.print   System is uppercase
+
+
+if statment need ( )  followed with {   }  
+
+
+
+Thread is like a different process at the same time
+	like the task in task manager
+
+>>>>>>>>part 1
+merge sort is faster 
+insertion sort is slower
+
+>>>>>>>>>>>recap part 2 
+consumer link from buffer text file
+producer put buffer file
+
+EACH producer will put 2000 inputs
+	combine will have 10,000 entry (5 producer in producerTester, 5 x 2000 = 10,000)
+
+
+
+
+
+Exam review 
+Demonstrate bank account - using polymorphesum
+
+
+throws exception and catch will be in exam 
+new Formatter IOEXCEPTION
+	handle internall in program 
+	

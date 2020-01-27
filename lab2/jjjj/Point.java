@@ -21,6 +21,7 @@ public class Point {
 	public Point(int id, double x, double y, double z, int r, int g, int b){
 		this.pointId = id;
 		this.xPos = x;
+		
 		this.yPos = y;
 		this.zPos = z;
 		this.red = r;

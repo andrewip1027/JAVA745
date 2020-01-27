@@ -1,0 +1,1 @@
+CREATE TABLE Reading(readingId INT(20) PRIMARY KEY,location VARCHAR(50),windspeed DOUBLE, temperature DOUBLE);

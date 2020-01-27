@@ -15,8 +15,6 @@ import java.util.*;
 import java.text.*;
 import java.io.*;
 
-hi initial commit
-
 public class cashier_C { 
 
     public static void main(String[] args) { 
@@ -47,8 +45,10 @@ public class cashier_C {
         while(ask);  //Ask user... 
   
     for(int ___ = 0; ___ < purchaseItem.length; ){
+        
+        
 
-    
+
     }
 
 

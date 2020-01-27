@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - method",
+            "request": "launch",
+            "mainClass": "method"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Cashier",
             "request": "launch",
             "mainClass": "Cashier"

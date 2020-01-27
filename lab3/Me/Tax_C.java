@@ -1,10 +1,8 @@
 
 // Once the user has entered all the items, then a bill of sale is printed to the console. 
-It must include the following data.
+// It must include the following data.
 //  For each item purchased it should display the following item name, quantity purchased, price before tax, price after tax. Each item should appear on a separate line
 //  The nal line should have the total price
-
-
 
 //jjjjj code
 public enum TaxRates {
