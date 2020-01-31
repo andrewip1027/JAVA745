@@ -2,12 +2,9 @@ import java.sql.Date;
 
 /*
 3.16
-(target heart rate calculator) While excercising, you can use a heart rate monitor to see that your heart rate stays within a safe range suggested by your trainers and doctors. According to the American Heart Association (AHA) (http://bit.ly/TargetHeartRates), the formula for calculating your maximum heart rate in beats per minute is 220 minus your age in years. Your target heart rate is a range thats 50 - 85% of your maximum heart rate. 
+(target heart rate calculator) While excercising, you can use a heart rate monitor to see that your heart rate stays within a safe range suggested by your trainers and doctors. According to the American Heart Association (AHA) (http://bit.ly/TargetHeartRates), the formula for calculating your maximum heart rate in beats per minute is 220 minus your age in years. Your target heart rate is a range thats 50 - 85% of your maximum heart rate. */
 
-
-
-Write a java app that prompts for the persons information, instantiates an object of class Heart Rates and prints the information from the object - including the person's first name, last name and date of birth -- then calculates and prints the person's age in (years), maximum heart rate and target heart - rate range. 
-
+/*SECTION Write a java app that prompts for the persons information, instantiates an object of class Heart Rates and prints the information from the object - including the person's first name, last name and date of birth -- then calculates and prints the person's age in (years), maximum heart rate and target heart - rate range. 
 */
 
 
