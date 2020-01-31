@@ -13,7 +13,5 @@ public class bank{
         private String accountName;  
         private int accountNumber;
         private double accountBalance; 
-        
     }
-
 }

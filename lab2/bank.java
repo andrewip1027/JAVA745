@@ -3,9 +3,6 @@ import java.util.Date;
 /**
  * This is an application which models a bank teller system which
  * allows the user to create accounts and allows for withdrawal and deposits.
- * 
- * 
- * 
  */
 /**
  * @author ANDREW.IP
