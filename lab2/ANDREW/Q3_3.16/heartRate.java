@@ -52,12 +52,18 @@ public class heartRate {
 /*SECTION The class also should include a method that 
 (a)calculates and returns the person's age (in years), (b) a method that calculates and returns the person's maximum heart rate and (c)a method that calculates and returns the person's target heart rate */
 //STUB (a)
-public personAge 
+public personAge (int , String){
+
+}
 
 
 //STUB  (b)
-public maxHeartRate
+public maxHeartRate(int , ){
+
+}
 
 //STUB (c)
-public targetHeartRate
+public targetHeartRate (int, ){
+    
+}
 
