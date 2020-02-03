@@ -11,7 +11,12 @@ public class date {
     private int day; //day 
     private int year; //year
     /*NOTE Variables which are defined without the STATIC keyword and are Outside any method declaration are Object-specific and are known as instance variables*/
-    
+
+    public static void main( String[] args) {
+        date d = new date(02, 1, 2020);
+        d.displayDate();
+    }
+
     /*SUB-SECTION -Provide a constructor that iniitializes the three instance variables and assumes that the values provided are correct */
     //!constructor initilize instance variables
     public date(int month, int day, int year){        
@@ -19,6 +24,7 @@ public class date {
         this.day = day;
         this.year = year;
     }
+    
 //NOTE Access Modifiers = public or private
     /*SECTION  -Provide a set and get method for each instance variable.*/ //!REMEMBER SET METHOD have () Inside have to specify the instance variable
         //set method - month
@@ -29,7 +35,9 @@ public class date {
     private int getMonth(){ //return Month      
         return this.month;
     }
-        //set method - day
+    
+    
+//set method - day
     private void setDay(int day){
         this.day = day;
     }
@@ -37,7 +45,8 @@ public class date {
     private int getDay(){
         return this.day;
     }
-        //set method - year 
+     
+//set method - year 
     private void setYear(int year){
         this.year = year;
     }
@@ -45,12 +54,12 @@ public class date {
     private int getYear(){
         return this.year;
     }
-    
     /*SECTION -Provide a method displayDate that displays the month, day and year separated by forward slashes (/) */ 
-        //create method 
-    public void displayDate (int month, int day, int year){
+    //create method 
+    public void displayDate (){  //NOTE: no display date arguments 
         System.out.println(this.month + "/" + this.day + "/" + this.year);
     }
-
+}
+    
 // -Write a test app named DateTest that demonstrates class Date's capabilities.
 
