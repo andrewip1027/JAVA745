@@ -13,7 +13,7 @@ public class Cashier {
 		
 		//an array declared for shopping cart
 		Item[] purchaseItem = new Item[50];
-		
+
 		Scanner input = new Scanner(System.in);
 		boolean askAgain = true;
 		String option;
